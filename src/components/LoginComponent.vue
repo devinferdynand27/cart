@@ -51,6 +51,7 @@
   
               const success = await this.login(credentials);
               if(success == true){
+                location.reload();  
                     this.$router.push('/');
        
               }
