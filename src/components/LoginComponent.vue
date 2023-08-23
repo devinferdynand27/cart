@@ -40,6 +40,7 @@
       },
       computed:{
           ...mapGetters('auth',['isAuthenticated']),
+           
       },
       methods: {
           ...mapActions('auth', ['login']),
