@@ -51,7 +51,7 @@
   
               const success = await this.login(credentials);
               if(success == true){
-                    this.$router.push('/kategori');
+                    this.$router.push('/');
               }
               else{
                   alert("Login failed")

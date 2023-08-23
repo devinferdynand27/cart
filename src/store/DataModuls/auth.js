@@ -4,7 +4,6 @@ const auth = {
     state: {
         token: localStorage.getItem('token') || '',
         userdata : [],
-        status : 2
     },
     getters: {
         isAuthenticated: state => (!!state.token && state.token != 'undefined'),
