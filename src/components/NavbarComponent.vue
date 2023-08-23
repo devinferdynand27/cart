@@ -40,14 +40,10 @@
               </svg>
             </a>
           </li>
-          <li class="ml-2 lg:ml-4 relative inline-block">
-            <router-link
-              to="/login"
-              v-if="isAuthenticated != true"
-             style="background: orange;" class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-            >
+          <li   v-if="isAuthenticated != true"
+             style="background: orange;" class="ml-2 lg:ml-4 relative inline-block text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+             v-on:click="login" >
               Login
-            </router-link>
           </li>
           <li class="ml-2 lg:ml-4 relative inline-block">
             <router-link
@@ -105,6 +101,9 @@ export default {
       this.logout();
       this.$router.push("/login");
       location.reload();
+    },
+    login() {
+      this.$router.push("/login");
     },
   },
   created() {
