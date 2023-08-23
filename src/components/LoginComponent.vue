@@ -52,7 +52,7 @@
               const success = await this.login(credentials);
               if(success == true){
                     this.$router.push('/');
-                   location.reload();
+       
               }
               else{
                   alert("Login failed")
