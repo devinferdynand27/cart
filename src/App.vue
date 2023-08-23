@@ -1,6 +1,6 @@
 <template>
   <div>
-      <NavbarComponent></NavbarComponent>
+      <navbarcomponent></navbarcomponent>
       <br>
       <SubNavbarComponent></SubNavbarComponent>
       <router-view></router-view>
@@ -8,12 +8,12 @@
   </div>
 </template>
 <script>
-import NavbarComponent from './components/navbarcomponent.vue';
+import navbarcomponent from '@/components/Navbarcomponent.vue';
 import SubNavbarComponent from './components/SubNavbarComponent.vue';
 import  FooterComponent  from './components/FooterComponent.vue';
 export default {
   components:{
-    NavbarComponent,
+    navbarcomponent,
     FooterComponent,
     SubNavbarComponent
   }
