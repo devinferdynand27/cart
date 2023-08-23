@@ -20,7 +20,6 @@ export default {
         },
         async fetchProductById({ commit }, slug) {
             try {
-                console.log(slug)
                 const dataProduct = await axios.get(`https://ecommerce.olipiskandar.com/api/v1/product/details/${slug}`)
                 commit('SET_PRODUCT_BY_ID', dataProduct.data)
             } catch (error) {

@@ -49,9 +49,14 @@ const router = createRouter({
       component: () => import('../views/kategori/indexComponent.vue')
     },
     {
+      path: '/checkout',
+      name: 'Ceckout',
+      component: () => import('../views/Checkout/indexComponent.vue')
+    },
+    {
       path: '/cart',
       name: 'Cart',
-      component: () => import('../components/CartComponent.vue')
+      component: () => import('../views/cart/indexComponent.vue')
     },
     {
       path: '/detail',

@@ -25,7 +25,7 @@
     </center>
   </div>
   <div v-else>
-   <router-link to="/profil">krekrenroemr</router-link>
+
     <div class="bg-white">
       <div class="mx-auto max-w-1xl px-4 py-2 lg:max-w-7xl lg:px-7">
         <div 
@@ -106,16 +106,18 @@
       </div>
     </div>
   </div>
+  
 </template>
 <script>
 import SlideComponent from "../../components/SlideComponent.vue";
-import { mapGetters } from "vuex";
+import { mapGetters, mapState } from "vuex";
 export default {
   components: {
     SlideComponent,
   },
   computed: {
     ...mapGetters("product", ["getProduct"]),
+    
   },
   mounted() {
     this.$store.dispatch("product/fetchProduct");

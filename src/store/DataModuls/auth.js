@@ -43,7 +43,8 @@ const auth = {
         },
         async getusertoken({commit}, token) {
             try {
-                const response = await axios.get('https://ecommerce.olipiskandar.com/api/v1/user/info', {
+                const response = await axios.get('https://ecommerce.olipiskandar.com/api/v1/user/info',
+                 {
                     headers:{
                         Authorization: `Bearer ${token}`
                     }
