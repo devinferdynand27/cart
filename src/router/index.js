@@ -8,6 +8,7 @@ function cektoken(to,from,next){
   }else{
     isAuthenticated = false
     next('/login')
+    location.reload
   }
 }
 beforeEnter:cektoken
@@ -24,7 +25,8 @@ const router = createRouter({
       path: '/profil',
       name: 'Profil',
       component: () => import('../views/profil/indexComponent.vue'),
-      beforeEnter:cektoken
+      beforeEnter:cektoken,
+
     },
     {
       path: '/product/detailproduct/:slug',
