@@ -8,7 +8,7 @@ function cektoken(to,from,next){
   }else{
     isAuthenticated = false
     next('/login')
-    location.reload
+    location.reload()
   }
 }
 beforeEnter:cektoken
