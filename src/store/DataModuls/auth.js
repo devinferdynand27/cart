@@ -56,7 +56,7 @@ const auth = {
         logout({commit}){
             const token = localStorage.getItem('token');
             localStorage.removeItem('token');
-            commit("SET_TOKEN", '')
+            commit("SET_TOKEN", token)
         }
     },
     mutations: {

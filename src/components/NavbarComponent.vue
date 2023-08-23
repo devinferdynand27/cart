@@ -104,6 +104,7 @@ export default {
     _logout() {
       this.logout();
       this.$router.push("/login");
+      location.reload();
     },
   },
   created() {
