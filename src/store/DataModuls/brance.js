@@ -3,7 +3,6 @@ export default {
     namespaced: true,
     state: {
         brance: [],
-        status : 1
     },
     getters: {
         getBrance: state => state.brance

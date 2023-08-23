@@ -3,7 +3,6 @@ export default {
     namespaced: true,
     state: {
         kategori: [],
-        status : 1
     },
     getters: {
         getKategori: state => state.kategori

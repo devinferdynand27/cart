@@ -4,7 +4,6 @@ export default {
     state: {
         products: [],
         getid: [],
-        staus : 1
     },
     getters: {
         getProduct: state => state.products
