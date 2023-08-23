@@ -43,7 +43,7 @@
       },
       methods: {
           ...mapActions('auth', ['login']),
-          async performLogin(){
+          async performLogin(next){
               const credentials = {
                   email: this.email,
                   password: this.password
@@ -51,9 +51,7 @@
   
               const success = await this.login(credentials);
               if(success == true){
-                location.reload();  
-                    this.$router.push('/');
-       
+                  next('/')
               }
               else{
                   alert("Login failed")
