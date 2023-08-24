@@ -16,7 +16,7 @@
       <!-- buttons -->
       <nav class="contents">
         <ul class="ml-4 xl:w-48 flex items-center justify-end">
-          <li class="ml-2 lg:ml-4 relative inline-block">
+          <li class="ml-2 lg:ml-4 relative inline-block"  v-if="isAuthenticated">
            <router-link to="/cart" v-if="cart.cart_items != undefined">
               <div  style="background: orange;"
                 class="absolute -top-1 text-white right-0 z-10 text-xs font-bold px-1 py-0.5 rounded-sm"
@@ -94,6 +94,7 @@
 <script>
 import { mapActions, mapGetters,mapState } from "vuex";
 export default {
+  props:['slug'],
   computed: {
     ...mapGetters("auth", ["isAuthenticated"]),
     ...mapState('auth',['userdata']),
@@ -108,7 +109,8 @@ export default {
     _logout() {
       this.logout();
       this.$router.push("/login");
-      location.reload();
+      // console.log('apas')
+      // // location.reload();
     },
     login() {
       this.$router.push("/login");

@@ -47,7 +47,7 @@
                             </div>
                             <div class="flex justify-between mb-2">
                                 <span>Harga </span>
-                                <span>$1.99</span>
+                                <span> {{ counter*10000 }}</span>
                             </div>
                             <hr class="my-2">
                             <div class="flex justify-between mb-2">

@@ -75,7 +75,7 @@
                   </div>
                   <div class="flex">
                     <span class="title-font font-medium text-2xl text-gray-900">$58.00</span>
-                    <router-link v-if="token" to="/checkout" ><button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">beli</button></router-link>
+                    <router-link v-if="token" :to="'/checkout/'" ><button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">beli</button></router-link>
                     <button v-else  v-on:click="nontifikasi" class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">beli</button>
                   
                   </div>
@@ -97,12 +97,12 @@ export default {
     computed: {
         ...mapState('product', ['getid']),
         ...mapGetters('auth', ['isAuthenticated']),
-        ...mapState('auth',['token'])
+        ...mapState('auth',['token']),
     },
     methods:{
       nontifikasi(){
         alert('login hela bro');
-        this.$router.push('/login');
+        this.$router.push('/login/' + this.slug);
       }
     }
 }

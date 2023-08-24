@@ -64,13 +64,20 @@ const router = createRouter({
       component: () => import('../components/DetailComponent.vue')
     },
     {
-      path: '/checkout',
+      path: '/checkout/product/detailproduct/:slug',
       name: 'Checkout',
-      component: () => import('../components/CheckoutComponent.vue')
+      component: () => import('../components/CheckoutComponent.vue'),
+      props:true
     },
     {
       path: '/login',
       component: () => import('../components/LoginComponent.vue'),
+      meta: {requiresGuest: true}
+    },
+    {
+      path: '/login/:slug',
+      component: () => import('../components/LoginComponent.vue'),
+      props:true,
       meta: {requiresGuest: true}
     },
   ]

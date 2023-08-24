@@ -27,20 +27,29 @@
             </div>
         </div><br><br><br><br><br><br><br><br><br><br><br>
       </section>
+      {{ slug }}
   </template>
   <script>
   import { mapActions, mapGetters, mapState } from "vuex";
   
   export default {
+      props:['slug'],
       data(){
           return {
               email: '',
               password: ''
           }
       },
+    //   mounted(){
+    //     this.$store.dispatch("product/fetchProductById", this.slug)
+    //   },
+    mounted() {
+    this.$store.dispatch("product/fetchProduct");
+     },
       computed:{
           ...mapGetters('auth',['isAuthenticated']),
-           
+          ...mapState('product', ['getid']),
+          ...mapGetters("product", ["getProduct"]),
       },
       methods: {
           ...mapActions('auth', ['login']),
@@ -52,7 +61,11 @@
   
               const success = await this.login(credentials);
               if(success == true){
-                    this.$router.push('/');
+                    if(this.slug == undefined){
+                        this.$router.push('/');
+                    }else{
+                        this.$router.push('/product/detailproduct/' + this.slug);
+                    }
               }
               else{
                   alert("Login failed")

@@ -59,7 +59,7 @@ const auth = {
             localStorage.removeItem('token');
             commit("SET_TOKEN", token)
         }
-    },
+    },  
     mutations: {
         SET_TOKEN(state, token){
             state.token = token;
