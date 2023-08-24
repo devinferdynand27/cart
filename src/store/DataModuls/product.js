@@ -4,6 +4,7 @@ export default {
     state: {
         products: [],
         getid: [],
+        cart: [],
     },
     getters: {
         getProduct: state => state.products
@@ -26,7 +27,8 @@ export default {
                 alert("Ada error");
                 console.log(error);
             }
-        }
+        },
+
     },
     mutations: {
         SET_PRODUCT(state, products) {
@@ -34,6 +36,9 @@ export default {
         },
         SET_PRODUCT_BY_ID(state, products) {
             state.getid = products
-        }
+        },
+        SET_KERANJANG_GET(state, cart){
+            state.cart = cart;
+        },
     }
 }

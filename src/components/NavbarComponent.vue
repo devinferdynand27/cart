@@ -10,7 +10,6 @@
           alt=""
         />
       </div>
-
       <!-- phone number -->
 
       <!-- buttons -->
@@ -108,9 +107,7 @@ export default {
     ...mapActions("auth", ["logout"]),
     _logout() {
       this.logout();
-      this.$router.push("/login");
-      // console.log('apas')
-      // // location.reload();
+      this.$router.push("/login");  
     },
     login() {
       this.$router.push("/login");
