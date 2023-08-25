@@ -2,9 +2,9 @@
   <div>
       <navbarcomponent></navbarcomponent>
       <br>
-      <SubNavbarComponent></SubNavbarComponent>
-      <router-view></router-view>
+      <SubNavbarComponent ></SubNavbarComponent>
       <FooterComponent></FooterComponent>
+      <router-view></router-view>
   </div>
 </template>
 <script>

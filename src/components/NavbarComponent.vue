@@ -68,10 +68,10 @@
           loading="lazy" />
    
           <li class="ml-2 lg:ml-4 relative inline-block">
-            <button
+            <button style="background: orange;"
               v-on:click="_logout()"
               v-if="isAuthenticated"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              class="text-white bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Logout
             </button>
@@ -84,11 +84,11 @@
 
     <hr />
   </header>       
-           <div v-if="cart.shops != undefined">
+           <!-- <div v-if="cart.shops != undefined">
                <div v-for="y in cart.shops.data" :key="y.id">
                 {{ y.name }}
                </div>
-           </div>
+           </div> -->
 </template>
 <script>
 import { mapActions, mapGetters,mapState } from "vuex";

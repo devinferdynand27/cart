@@ -4,11 +4,9 @@
           <li v-on:click="produk"><a href="#" v-on:click="produk">Produk</a></li>
           <li  v-on:click="kategori"><a href="#"  v-on:click="kategori">Kategori</a></li>
           <li v-on:click="brans"><a href="#"  v-on:click="brans">Brans</a></li>
-          <li class="ip mt-2"> <h2 class="text-2xl font-bold tracking-tight text-gray-900">Ecommarcet   </h2></li>
+          <li class="ip mt-2"> <h2 style="color: orange;" class="text-2xl font-bold tracking-tight text-gray-900">Ecommarcet   </h2></li>
         </ul>
        </center>
-
-       {{ status }}
 </template>
 <script>
   import { mapActions, mapGetters, mapState } from "vuex";
